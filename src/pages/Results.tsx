@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import MatrixGrid from "@/components/MatrixGrid";
+import CustomMatrix from "@/components/CustomMatrix";
 import { QUADRANTS } from "@/data/quadrants";
 import { Button } from "@/components/ui/button";
 
@@ -41,7 +41,7 @@ const ResultsPage: React.FC = () => {
 
       <section className="grid lg:grid-cols-2 gap-8 items-center">
         <div className="flex items-center justify-center">
-          <MatrixGrid x={x_coord} y={y_coord} />
+          <CustomMatrix x={x_coord} y={y_coord} />
         </div>
         <div className="rounded-lg border p-6 bg-card shadow-[var(--shadow-elevated)]">
           <h2 className="text-2xl font-semibold mb-2">{quadrant_id}: {quad?.name}</h2>
