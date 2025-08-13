@@ -94,49 +94,45 @@ const QuizPage: React.FC = () => {
   return (
     <main className="container py-10">
       <header className="mb-8">
-        <h1 className="text-3xl font-bold">Cuestionario</h1>
+        <h1 className="text-3xl font-bold text-primary">Cuestionario</h1>
         <p className="text-muted-foreground">Responde una opción por pregunta.</p>
       </header>
 
       <form onSubmit={handleSubmit} className="grid gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Tu información</CardTitle>
-          </CardHeader>
-          <CardContent className="grid md:grid-cols-2 gap-4">
+        <div className="manfred-card">
+          <h3 className="text-lg font-semibold text-primary mb-4">Tu información</h3>
+          <div className="grid md:grid-cols-2 gap-4">
             <div className="grid gap-2">
               <Label htmlFor="name">Nombre (opcional)</Label>
-              <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" />
+              <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" className="manfred-input" />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Email (opcional)</Label>
-              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tucorreo@ejemplo.com" />
+              <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tucorreo@ejemplo.com" className="manfred-input" />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
         {QUESTIONS.map((q) => (
-          <Card key={q.id}>
-            <CardHeader>
-              <CardTitle className="text-lg">{q.text}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <RadioGroup value={answers[q.id]} onValueChange={(v) => handleSelect(q.id, v)}>
-                <div className="grid gap-3">
-                  {q.options.map((opt) => (
-                    <div key={opt.id} className="flex items-center gap-3">
-                      <RadioGroupItem id={opt.id} value={opt.id} />
-                      <Label htmlFor={opt.id} className="cursor-pointer">{opt.option_text}</Label>
-                    </div>
-                  ))}
-                </div>
-              </RadioGroup>
-            </CardContent>
-          </Card>
+          <div key={q.id} className="manfred-card">
+            <h3 className="text-lg font-semibold text-primary mb-4">{q.text}</h3>
+            <RadioGroup value={answers[q.id]} onValueChange={(v) => handleSelect(q.id, v)}>
+              <div className="grid gap-3">
+                {q.options.map((opt) => (
+                  <div key={opt.id} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors">
+                    <RadioGroupItem id={opt.id} value={opt.id} />
+                    <Label htmlFor={opt.id} className="cursor-pointer flex-1">{opt.option_text}</Label>
+                  </div>
+                ))}
+              </div>
+            </RadioGroup>
+          </div>
         ))}
 
         <div className="flex justify-end">
-          <Button type="submit" size="lg" variant="hero" disabled={!isComplete}>Ver resultados</Button>
+          <button type="submit" className="manfred-button text-lg px-8 py-4" disabled={!isComplete}>
+            Ver resultados
+          </button>
         </div>
       </form>
     </main>

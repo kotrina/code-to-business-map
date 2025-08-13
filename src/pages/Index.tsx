@@ -12,7 +12,7 @@ const Index = () => {
     <main className="relative min-h-screen flex items-center justify-center">
       <BackgroundGlow />
       <section className="relative z-10 container mx-auto py-24 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary">
           Mapa de carrera Tech
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
@@ -29,16 +29,16 @@ const Index = () => {
         </div>
 
         <div id="como-funciona" className="mt-16 grid md:grid-cols-3 gap-6 text-left">
-          <div className="rounded-lg border p-6 bg-card shadow-[var(--shadow-elevated)]">
-            <h2 className="text-xl font-semibold mb-2">1. Responde</h2>
+          <div className="manfred-card">
+            <h2 className="text-xl font-semibold mb-2 text-primary">1. Responde</h2>
             <p className="text-muted-foreground">10 preguntas de opción múltiple + tu nombre y email (opcional).</p>
           </div>
-          <div className="rounded-lg border p-6 bg-card shadow-[var(--shadow-elevated)]">
-            <h2 className="text-xl font-semibold mb-2">2. Calculamos</h2>
+          <div className="manfred-card">
+            <h2 className="text-xl font-semibold mb-2 text-primary">2. Calculamos</h2>
             <p className="text-muted-foreground">Sumamos valores técnicos y de negocio, normalizamos y te ubicamos en la matriz 3x3.</p>
           </div>
-          <div className="rounded-lg border p-6 bg-card shadow-[var(--shadow-elevated)]">
-            <h2 className="text-xl font-semibold mb-2">3. Descubre</h2>
+          <div className="manfred-card">
+            <h2 className="text-xl font-semibold mb-2 text-primary">3. Descubre</h2>
             <p className="text-muted-foreground">Verás tu punto en la matriz y una lista de roles sugeridos.</p>
           </div>
         </div>
