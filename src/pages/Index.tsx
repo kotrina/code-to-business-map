@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import BackgroundGlow from "@/components/BackgroundGlow";
+import logoManfred from "@/assets/logo-manfred.svg";
 
 const Index = () => {
   useEffect(() => {
@@ -12,6 +13,7 @@ const Index = () => {
     <main className="relative min-h-screen flex items-center justify-center">
       <BackgroundGlow />
       <section className="relative z-10 container mx-auto py-24 text-center">
+        <img src={logoManfred} alt="Manfred" className="h-12 md:h-16 mx-auto mb-8" />
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary">
           Mapa de carrera Tech
         </h1>

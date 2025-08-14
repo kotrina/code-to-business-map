@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import CustomMatrix from "@/components/CustomMatrix";
 import { QUADRANTS } from "@/data/quadrants";
+import logoManfred from "@/assets/logo-manfred.svg";
 
 const ResultsPage: React.FC = () => {
   const navigate = useNavigate();
@@ -33,7 +34,8 @@ const ResultsPage: React.FC = () => {
 
   return (
     <main className="container py-10 grid gap-10">
-      <header className="grid gap-2">
+      <header className="grid gap-2 text-center">
+        <img src={logoManfred} alt="Manfred" className="h-8 md:h-10 mx-auto mb-4" />
         <h1 className="text-3xl font-bold text-primary">Tus resultados</h1>
         <p className="text-muted-foreground">Coordenadas: X {Math.round(x_coord)} · Y {Math.round(y_coord)} — Cuadrante: {quadrant_id}</p>
       </header>

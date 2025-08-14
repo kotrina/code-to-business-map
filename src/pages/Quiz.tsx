@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import logoManfred from "@/assets/logo-manfred.svg";
 
 export type Submission = {
   id: string;
@@ -93,7 +94,8 @@ const QuizPage: React.FC = () => {
 
   return (
     <main className="container py-10">
-      <header className="mb-8">
+      <header className="mb-8 text-center">
+        <img src={logoManfred} alt="Manfred" className="h-8 md:h-10 mx-auto mb-6" />
         <h1 className="text-3xl font-bold text-primary">Cuestionario</h1>
         <p className="text-muted-foreground">Responde una opción por pregunta.</p>
       </header>
