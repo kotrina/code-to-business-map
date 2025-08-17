@@ -3,14 +3,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import BackgroundGlow from "@/components/BackgroundGlow";
 import logoManfred from "@/assets/logo-manfred.svg";
-
 const Index = () => {
   useEffect(() => {
     document.title = "Mapa de carrera Tech — Bienvenida";
   }, []);
-
-  return (
-    <main className="relative min-h-screen flex items-center justify-center">
+  return <main className="relative min-h-screen flex items-center justify-center">
       <BackgroundGlow />
       <section className="relative z-10 container mx-auto py-24 text-center">
         <img src={logoManfred} alt="Manfred" className="h-12 md:h-16 mx-auto mb-8" />
@@ -45,8 +42,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
