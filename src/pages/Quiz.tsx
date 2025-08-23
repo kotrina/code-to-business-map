@@ -90,7 +90,7 @@ const QuizPage: React.FC = () => {
       }
     });
   };
-  return <main className="container py-10">
+  return <main className="container py-10 text-[#038185]">
       <header className="mb-8 text-center">
         <img src={logoManfred} alt="Manfred" className="h-8 md:h-10 mx-auto mb-6" />
         <h1 className="text-3xl font-bold text-[#038185]">Cuestionario</h1>
