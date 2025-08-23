@@ -11,7 +11,7 @@ const Index = () => {
       <BackgroundGlow />
       <section className="relative z-10 container mx-auto py-24 text-center">
         <img src={logoManfred} alt="Manfred" className="h-12 md:h-16 mx-auto mb-8" />
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-[#038185]">
           Mapa de carrera Tech
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
@@ -29,7 +29,7 @@ const Index = () => {
 
         <div id="como-funciona" className="mt-16 grid md:grid-cols-3 gap-6 text-left">
           <div className="manfred-card">
-            <h2 className="text-xl font-semibold mb-2 text-primary">1. Responde</h2>
+            <h2 className="text-xl font-semibold mb-2 text-[#038185]">1. Responde</h2>
             <p className="text-muted-foreground">10 preguntas de opción múltiple + tu nombre y email (opcional).</p>
           </div>
           <div className="manfred-card">
@@ -37,7 +37,7 @@ const Index = () => {
             <p className="text-muted-foreground">Sumamos valores técnicos y de negocio, normalizamos y te ubicamos en la matriz 3x3.</p>
           </div>
           <div className="manfred-card">
-            <h2 className="text-xl font-semibold mb-2 text-primary">3. Descubre</h2>
+            <h2 className="text-xl font-semibold mb-2 text-[#038185]">3. Descubre</h2>
             <p className="text-muted-foreground">Verás tu punto en la matriz y una lista de roles sugeridos.</p>
           </div>
         </div>
