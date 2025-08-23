@@ -90,16 +90,16 @@ const QuizPage: React.FC = () => {
       }
     });
   };
-  return <main className="container py-10 text-[#038185]">
+  return <main className="container py-10 text-foreground">
       <header className="mb-8 text-center">
         <img src={logoManfred} alt="Manfred" className="h-8 md:h-10 mx-auto mb-6" />
-        <h1 className="text-3xl font-bold text-[#038185]">Cuestionario</h1>
-        <p className="text-[#038185]">Responde una opción por pregunta.</p>
+        <h1 className="text-3xl font-bold text-primary">Cuestionario</h1>
+        <p className="text-primary">Responde una opción por pregunta.</p>
       </header>
 
       <form onSubmit={handleSubmit} className="grid gap-6">
         <div className="manfred-card">
-          <h3 className="text-lg font-semibold mb-4 text-[#038185]">Tu información</h3>
+          <h3 className="text-lg font-semibold mb-4 text-primary">Tu información</h3>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="grid gap-2">
               <Label htmlFor="name">Nombre (opcional)</Label>
@@ -113,7 +113,7 @@ const QuizPage: React.FC = () => {
         </div>
 
         {QUESTIONS.map(q => <div key={q.id} className="manfred-card">
-            <h3 className="text-lg font-semibold mb-4 text-[#038185]">{q.text}</h3>
+            <h3 className="text-lg font-semibold mb-4 text-primary">{q.text}</h3>
             <RadioGroup value={answers[q.id]} onValueChange={v => handleSelect(q.id, v)}>
               <div className="grid gap-3">
                 {q.options.map(opt => <div key={opt.id} className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors">
@@ -125,7 +125,7 @@ const QuizPage: React.FC = () => {
           </div>)}
 
         <div className="flex justify-end">
-          <button type="submit" disabled={!isComplete} className="manfred-button text-lg px-8 py-4 text-[#038185]">
+          <button type="submit" disabled={!isComplete} className="manfred-button text-lg px-8 py-4">
             Ver resultados
           </button>
         </div>

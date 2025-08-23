@@ -40,16 +40,16 @@ All colors MUST be HSL.
 
     /* Design System Colors - Manfred Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 182 96% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 182 96% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 182 96% 27%;
 
-    --primary: 187 97% 40%;  /* #03b2cb converted to HSL */
-    --primary-foreground: 210 40% 98%;
+    --primary: 182 96% 27%;  /* #038185 converted to HSL */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -103,8 +103,8 @@ All colors MUST be HSL.
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 187 97% 45%;  /* Manfred primary for dark mode */
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 182 96% 32%;  /* #038185 for dark mode */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
